@@ -1,0 +1,318 @@
+.expenseContainer {
+    padding: 20px;
+    background-color: #ffffff;
+    /* White background for a clean look */
+    border-radius: 12px;
+    /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    /* Deeper shadow for more depth */
+}
+
+.total {
+    text-align: right;
+    font-weight: bold;
+}
+
+.expenseTitle {
+    font-size: 28px;
+    /* Larger title font size */
+    margin-bottom: 20px;
+    color: #4A4A4A;
+    /* Darker gray for better readability */
+    text-align: center;
+    /* Centered title */
+    font-family: 'Arial', sans-serif;
+    /* Arial font for a clean look */
+}
+
+.monthRangeDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center the month range */
+    margin-bottom: 20px;
+}
+
+.addExpense {
+    width: 100px;
+    height: 40px;
+    background-color: #4A4A4A;
+    border: 1px solid #000000;
+    cursor: pointer;
+    color: #f0f8ff;
+    border-radius: 5px;
+    transition: width 0.2s, height 0.2s;
+}
+
+.addExpense:hover {
+    width: 110px;
+    height: 45px;
+}
+
+.monthRange {
+    margin-left: 10px;
+    padding: 10px;
+    /* Increased padding for better touch */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f0f8ff;
+    /* Light blue background for input */
+    transition: border-color 0.3s, background-color 0.3s;
+    /* Smooth transition */
+}
+
+.monthRange:hover {
+    border-color: #007bff;
+    background-color: #e7f3ff;
+    /* Change background on hover */
+}
+
+.filterContainer {
+    margin-left: 20px;
+}
+
+.filterContainer select {
+    padding: 10px;
+    /* Increased padding for better touch */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f0f8ff;
+    /* Light blue background for select */
+    transition: border-color 0.3s, background-color 0.3s;
+    /* Smooth transition */
+}
+
+.filterContainer select:hover {
+    border-color: #007bff;
+    background-color: #e7f3ff;
+    /* Change background on hover */
+}
+
+.expenseTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    /* Rounded corners for table */
+    overflow: hidden;
+    /* To apply border-radius */
+}
+
+.tableHeader {
+    background-color: #007bff;
+    /* Blue header */
+    color: #fff;
+    text-align: left;
+    /* Align text to the left */
+}
+
+.tableHeader th {
+    padding: 16px;
+    /* More padding for header */
+}
+
+.tableRow {
+    background-color: #ffffff;
+    /* White row background */
+    border-bottom: 1px solid #ddd;
+}
+
+.tableRow:hover {
+    background-color: #f9f9f9;
+    /* Light gray on hover */
+}
+
+.inputField,
+.selectField,
+.textArea {
+    width: 100%;
+    padding: 10px;
+    /* Increased padding for input */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    /* Smooth transition */
+}
+
+.inputField:focus,
+.selectField:focus,
+.textArea:focus {
+    border-color: #007bff;
+    /* Highlight border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Soft glow effect */
+}
+
+.dateCell {
+    font-size: 14px;
+    color: #555;
+}
+
+.span {
+    font-weight: bold;
+}
+
+.editButton,
+.deleteButton,
+.saveButton,
+.resetButton {
+    color: white;
+    /* Text color */
+    border: none;
+    /* No border */
+    padding: 10px 15px;
+    /* Default padding */
+    border-radius: 8px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer on hover */
+    transition: background-color 0.3s, transform 0.2s;
+    /* Smooth transition */
+    margin-right: 5px;
+    /* Spacing between buttons */
+}
+
+/* Edit Button */
+.editButton {
+    background-color: #d1edff;
+    /* Light sky blue */
+}
+
+.editButton:hover {
+    transform: scale(1.05) rotate(2deg);
+    /* Slightly enlarge and rotate on hover */
+}
+
+/* Delete Button */
+.deleteButton {
+    background-color: #e4e4e4;
+    /* Light gray */
+}
+
+.deleteButton:hover {
+    transform: scale(1.05) rotate(-2deg);
+    /* Slightly enlarge and rotate in the opposite direction on hover */
+}
+
+/* Save Button */
+.saveButton {
+    background-color: #4CAF50;
+    /* Green */
+}
+
+.saveButton:hover {
+    transform: scale(1.05) translateY(-2px);
+    /* Slightly enlarge and lift up on hover */
+}
+
+/* Reset Button */
+.resetButton {
+    background-color: #F44336;
+    /* Red */
+    margin-top: 10px;
+    /* Margin on top for spacing */
+}
+
+.resetButton:hover {
+    transform: scale(1.05) translateY(-2px);
+    /* Slightly enlarge and lift up on hover */
+}
+
+
+.noDataCell {
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+}
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+    .expenseContainer {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .expenseTitle {
+        font-size: 2rem;
+        /* Adjust title font size */
+    }
+
+    .expenseTable {
+        font-size: 0.9rem;
+        /* Table font size */
+        table-layout: auto;
+        /* Auto layout for better responsiveness */
+    }
+
+    .inputField,
+    .selectField,
+    .textArea {
+        font-size: 0.9rem;
+        /* Adjust input font size */
+        padding: 8px;
+        /* Adjust padding */
+    }
+
+    .saveButton,
+    .editButton,
+    .deleteButton {
+        padding: 8px 12px;
+        /* Adjust padding */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .expenseContainer {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .expenseTitle {
+        font-size: 1.5rem;
+        /* Adjust title font size */
+    }
+
+    .expenseTable {
+        font-size: 0.8rem;
+        /* Table font size */
+    }
+
+    .tableHeader th,
+    .tableRow td {
+        padding: 10px;
+        /* Adjust padding */
+    }
+
+    .inputField,
+    .selectField,
+    .textArea {
+        font-size: 0.8rem;
+        /* Adjust input font size */
+        padding: 6px;
+        /* Adjust padding */
+    }
+
+    .saveButton,
+    .editButton,
+    .deleteButton {
+        padding: 6px 10px;
+        /* Adjust padding */
+        font-size: 0.8rem;
+        /* Adjust button font size */
+    }
+
+    .dateCell {
+        font-size: 0.8rem;
+        /* Adjust date cell font size */
+    }
+
+    .noData {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}

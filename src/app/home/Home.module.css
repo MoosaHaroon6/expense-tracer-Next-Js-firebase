@@ -1,0 +1,175 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* Adjust background color */
+    border-bottom: 1px solid #ccc;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Adjust title color */
+}
+
+.buttonLogout {
+    padding: 10px 20px;
+    background-color: #007bff; /* Adjust button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonLogout:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.formContainer {
+    padding: 20px;
+    background-color: #fff; /* Form background color */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input,
+.select,
+.currency {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+.textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 100px; /* Set height for textarea */
+}
+
+.error {
+    color: #ff0000;
+}
+
+.buttonSave {
+    padding: 10px 20px;
+    background-color: #28a745; /* Adjust save button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonSave:hover {
+    background-color: #218838; /* Darker shade on hover */
+}
+
+.link {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .buttonLogout {
+        margin-top: 10px; /* Margin for button on small screens */
+    }
+
+    .formContainer {
+        width: 100%; /* Make form full width on small screens */
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 20px; /* Smaller title font on small screens */
+    }
+
+    .label {
+        font-size: 14px; /* Smaller label font */
+    }
+
+    .input,
+    .select,
+    .currency,
+    .textarea {
+        font-size: 14px; /* Adjust font size for inputs */
+    }
+
+    .buttonSave {
+        width: 100%; /* Full width button */
+        padding: 12px; /* More padding for better touch target */
+    }
+
+    .link {
+        font-size: 14px; /* Smaller link font */
+    }
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 18px; /* Smaller title font for 600px screens */
+    }
+
+    .buttonLogout,
+    .buttonSave {
+        padding: 10px; /* Adjust button padding */
+        font-size: 14px; /* Adjust button font size */
+    }
+
+    .label {
+        font-size: 12px; /* Smaller label font for better readability */
+    }
+
+    .input,
+    .select,
+    .currency,
+    .textarea {
+        font-size: 12px; /* Smaller input font size */
+    }
+
+    .formContainer {
+        padding: 10px; /* Reduce padding for small screens */
+    }
+
+    .currency {
+        padding: 10px; /* Ensure currency dropdown has padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 16px; /* Even smaller title font */
+    }
+
+    .buttonLogout,
+    .buttonSave {
+        padding: 8px; /* Further adjust button padding */
+        font-size: 12px; /* Adjust button font size */
+    }
+
+    .label {
+        font-size: 12px; /* Maintain smaller label font */
+    }
+}
