@@ -28,7 +28,7 @@ export default function AuthContextProvider({ children }: { children: ReactNode 
                 router.push('/home');
             } else {
                 setUser(null);
-                router.push('/');
+                router.push('/login');
             }
         })
     }, [router])
