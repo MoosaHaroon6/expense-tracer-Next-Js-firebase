@@ -20,6 +20,7 @@ export default function Login() {
                 router.push('/home');
             } else {
                 setError('Please verify your email before logging in.');
+                setTimeout(() => { setError('') }, 2000);
             }
         } catch (error) {
             setError('Login Failed');
@@ -48,9 +49,13 @@ export default function Login() {
                     onChange={(e) => { setPassword(e.target.value); }}
                 />
             </label>
+            {error &&
+                <p style={{ color: "red" }}>{error}</p>
+            }
             <br />
             <button className={styles.button} onClick={loginHandler}>Login</button>
-            <span>Don't have an account?</span>
+
+            <span>Don&apos;t have an account?</span>
             <Link href={'/signup'} className={styles.link}>Create Account</Link>
         </div>
     );

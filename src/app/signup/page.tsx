@@ -11,6 +11,7 @@ export default function Signup() {
     const [password, setPassword] = useState('');
     const [notification, setNotification] = useState({ message: '', error: false });
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
     const router = useRouter();
 
     const validateEmail = (email: string) => {
@@ -34,8 +35,9 @@ export default function Signup() {
             setEmail('');
             setPassword('');
             router.push('/emailverification');
-        } catch (error) {
-            setNotification({ error: true, message: 'falied to signup' });
+        } catch {
+            setError('SignUp Failed at the moment try later!');
+            setTimeout(() => { setError('') }, 2000);
         } finally {
             setLoading(false);
         }
@@ -73,6 +75,9 @@ export default function Signup() {
             <button className={styles.button} onClick={signupHandler} disabled={loading}>
                 {loading ? 'Signing Up...' : 'Sign Up'}
             </button>
+            {error &&
+                <p style={{ color: "red" }}>{error}</p>
+            }
             <br />
             <span>Already have an account?</span>
             <Link href={'/login'} className={styles.link}>Login</Link>
