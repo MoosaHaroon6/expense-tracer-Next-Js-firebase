@@ -34,7 +34,7 @@ export default function Signup() {
             setNotification({ message: 'A verification email has been sent to your email address. Please verify before logging in.', error: false });
             setEmail('');
             setPassword('');
-            router.push('/emailverification');
+            router.push('/emailVerification');
         } catch {
             setError('SignUp Failed at the moment try later!');
             setTimeout(() => { setError('') }, 2000);
