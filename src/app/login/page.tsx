@@ -22,8 +22,9 @@ export default function Login() {
                 setError('Please verify your email before logging in.');
                 setTimeout(() => { setError('') }, 2000);
             }
-        } catch (error) {
+        } catch  {
             setError('Login Failed');
+            setTimeout(() => { setError('') }, 2000);
         }
     }
 
