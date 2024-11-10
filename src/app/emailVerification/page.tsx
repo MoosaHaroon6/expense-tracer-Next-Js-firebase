@@ -1,7 +1,7 @@
 'use client';
 
 import Link from "next/link";
-import styles from './Emailverfication.module.css'; 
+import styles from './EmailVerification.module.css'; 
 
 export default function EmailVerification() {
     return (
