@@ -23,7 +23,7 @@ const actionCodeSettings = {
     dynamicLinkDomain: 'example.page.link'
 };
 
-export function emailVerification(email: string) {
+export function emailVerification(email: string) {  
     sendSignInLinkToEmail(auth, email, actionCodeSettings)
         .then(() => {
             window.localStorage.setItem('emailForSignIn', email);

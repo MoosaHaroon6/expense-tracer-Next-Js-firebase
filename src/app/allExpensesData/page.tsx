@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useCallback, useEffect, useState } from 'react';
@@ -70,6 +69,7 @@ export default function ExpenseData() {
 
         const totalAmount = () => filterExpenses.reduce((sum, expense) => sum + expense.amount, 0);
         setTotal(totalAmount);
+        
     }, [choosenCategory, expenselist, monthRange]);
 
 

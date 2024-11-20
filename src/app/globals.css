@@ -14,10 +14,21 @@
   }
 }
 
+
+html, body {
+  height: 100%;
+  margin: 0; 
+  padding: 0;
+}
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color:  #212121;
+  background-color: #212121; 
+  font-family: var(--font-poppins); 
+}
+
+#__next {
+  height: 100%;
 }
 
 @layer utilities {

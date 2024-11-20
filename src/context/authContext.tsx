@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 import { app } from "@/firebase/firebaseConfig";
@@ -13,21 +13,20 @@ type AuthContextType = { user: UserType | null; }
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
-
-export default function AuthContextProvider({ children }: { children: ReactNode }) {
+export function AuthContextProvider({ children }: { children: ReactNode }) {
 
     const [user, setUser] = useState<UserType | null>(null)
     const router = useRouter();
 
     useEffect(() => {
-        const auth = getAuth(app);
+        const auth = getAuth(app);  // firebase authState 
         onAuthStateChanged(auth, (loggedInUser) => {
             if (loggedInUser) {
                 const { email, uid } = loggedInUser;
                 setUser({ email, uid });
-                router.push('/home');
+                router.push('/allExpensesData');
             } else {
-                setUser(null);
+                setUser(null); // if user not found
                 router.push('/login');
             }
         })

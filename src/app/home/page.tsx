@@ -5,6 +5,8 @@ import styles from './Home.module.css';
 import { useState } from 'react';
 import { saveExpenses } from '@/firebase/firebaseFireStore';
 import Link from 'next/link';
+import { signOut } from 'firebase/auth';
+import { auth } from '@/firebase/firebaseAuth';
 
 export default function Home() {
     const router = useRouter();   // router called
@@ -16,7 +18,14 @@ export default function Home() {
     const [error, setError] = useState('');
 
     const logoutHandler = () => {
-        router.push('/');  // logging out button handler
+        signOut(auth)
+            .then(() => {
+                router.push("/");
+                console.log("Logout successful");
+            })
+            .catch(() => {
+                console.log("Logout failed");
+            }); // logging out button handler
     };
 
     const currentTime = () => {
